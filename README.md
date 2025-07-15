@@ -9,14 +9,16 @@ Solo se realizaron los paso 1,2,3 y el bonus
 
 Para la practica bonus se agregaron al repositorio el archivo "credentials.json" y "main.tf" estos dos archivos funcionan en conjunto para desplegar una arquitectura en GCP usando Terraform. Los pasos a seguir son los siguientes: 
 
-1.- conectarnos al clodshell del proyecto y subir los archivos "credentials.json" y "main.tf" ambos en el mismo path 
+1.- conectarnos al cloudshell del proyecto usando "gcloud config set project KCGCP-Terraform " 
 
-2.- utlizar "terraform init" para inicializar terreform 
+2.- usando nano o algun editor de archivos, creamos los archivos "credentials.json" y "main.tf" copiamos y pegamos el contenido respectivamente ambos en el mismo path 
 
-3.- usar "terraform plan" para vizualizar los cambios y las instancias que se aplicaran 
+3.- utlizar "terraform init" para inicializar terreform 
 
-4.- usar "terraform apply" para que los cambios tomen efecto y confirmar con "yes" 
+4.- usar "terraform plan" para vizualizar los cambios y las instancias que se aplicaran 
 
-5.- Validar que todo se haya instalado correctamente desde la consola 
+5.- usar "terraform apply" para que los cambios tomen efecto y confirmar con "yes" 
 
-6.- para destruir todo "terraform detroy" y confirmar con "yes"
+6.- Validar que todo se haya instalado correctamente desde la consola 
+
+7.- para destruir todo "terraform detroy" y confirmar con "yes"
