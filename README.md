@@ -9,7 +9,7 @@ Para revisar la practica 1 los servcios e instancias estan apagadas entonces par
 
 Solo se realizaron los paso 1,2,3 y el bonus 
 
-Para la practica bonus se agregaron al repositorio el archivo "credentials.json" y "main.tf" estos dos archivos funcionan en conjunto para desplegar una arquitectura en GCP usando Terraform. El archivo "credentials.json" esta en un rar por politicas de seguridad de GCP asi que es necesario extraerlo antes. 
+Para la practica bonus se agregaron al repositorio el archivo "credentials.txt" y "main.tf" estos dos archivos funcionan en conjunto para desplegar una arquitectura en GCP usando Terraform. El archivo "credentials.txt" esta en un rar por politicas de seguridad de GCP asi que es necesario extraerlo antes. 
 
 Los pasos a seguir son los siguientes: 
 
