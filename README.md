@@ -9,7 +9,7 @@ Para revisar la practica 1 los servcios e instancias estan apagadas entonces par
 
 Solo se realizaron los paso 1,2,3 y el bonus 
 
-Para el punto 3 necesitamos conectarnos al testserver-v2 y buscar y editar el script stress_ab.sh y reemplazar la IP publica  del servidor del MIG que este activo
+Para el punto 3 necesitamos conectarnos al testserver-v2 en la ruta /home/naesman1devops buscar y editar el script stress_ab.sh y reemplazar la IP publica en el campo TARGET_URL  del servidor del MIG que este activo
 
 Este es el script :
 
