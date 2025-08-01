@@ -7,8 +7,6 @@ Los accesos a los dos proyectos se enviarion por mail al profesor directo desde 
 
 Para revisar la practica 1 los servcios e instancias estan apagadas entonces para lograr que funcionen se necesitan encender tanto la VM que esta en el apartado de instancias como el grupo de instancias que esta en el apartado de grupos y por ultimo la instancia de SQL que esta en el apartado de SQL
 
-Solo se realizaron los paso 1,2,3 y el bonus 
-
 Para el punto 3 necesitamos conectarnos al testserver-v2 en la ruta /home/naesman1devops buscar y editar el script stress_ab.sh y reemplazar la IP publica en el campo TARGET_URL  del servidor del MIG que este activo
 
 Este es el script :
@@ -46,6 +44,9 @@ echo "Stress test finalizado."
 ```
 una vez que que el script haya terminado el MIG empeza a eliminar las instancias en un tiempo aproximado de 20 min
 
+para el punto 4 se necesitamos abrir la URL desde el cloudshell "https://practica-dot-eighth-pursuit-465604-h3.uc.r.appspot.com/"
+
+Y los logs estan en aooengine en el apartado de versiones usando el servicio practica.
 
 Para la practica bonus se agregaron al repositorio el archivo "credentials.txt" y "main.tf" estos dos archivos funcionan en conjunto para desplegar una arquitectura en GCP usando Terraform. El archivo "credentials.txt" esta en un rar por politicas de seguridad de GCP asi que es necesario extraerlo antes. 
 
