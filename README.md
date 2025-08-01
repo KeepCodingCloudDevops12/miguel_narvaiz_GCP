@@ -9,6 +9,44 @@ Para revisar la practica 1 los servcios e instancias estan apagadas entonces par
 
 Solo se realizaron los paso 1,2,3 y el bonus 
 
+Para el punto 3 necesitamos conectarnos al testserver-v2 y buscar y editar el script stress_ab.sh y reemplazar la IP publica  del servidor del MIG que este activo
+
+Este es el script :
+
+```
+#!/bin/bash
+
+# IP o dominio del Load Balancer
+TARGET_URL="http://34.8.221.243/"
+
+# Total de rondas de prueba
+ROUNDS=10
+
+# Parámetros de AB
+TOTAL_REQUESTS=13000
+CONCURRENCY=50
+
+# Carpeta para resultados
+RESULTS_DIR="ab_results"
+mkdir -p $RESULTS_DIR
+
+echo "Iniciando stress test con Apache Benchmark"
+echo "URL objetivo: $TARGET_URL"
+echo "Guardando resultados en ./$RESULTS_DIR"
+
+for i in $(seq 1 $ROUNDS); do
+  echo "----> Ronda $i"
+  TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+  ab -n $TOTAL_REQUESTS -c $CONCURRENCY $TARGET_URL > $RESULTS_DIR/ab_result_$TIMESTAMP.txt
+  echo "Esperando 5 segundos antes de la siguiente ronda..."
+  sleep 5
+done
+
+echo "Stress test finalizado."
+```
+una vez que que el script haya terminado el MIG empeza a eliminar las instancias en un tiempo aproximado de 20 min
+
+
 Para la practica bonus se agregaron al repositorio el archivo "credentials.txt" y "main.tf" estos dos archivos funcionan en conjunto para desplegar una arquitectura en GCP usando Terraform. El archivo "credentials.txt" esta en un rar por politicas de seguridad de GCP asi que es necesario extraerlo antes. 
 
 Los pasos a seguir son los siguientes: 
